@@ -6,7 +6,7 @@ console.log('---------------------------')
 console.log(' Booleans  / Numbers       ')
 console.log('---------------------------')
 
-var bOne   = (2 * 5  === 15);
+var bOne   = (3 * 5  === 15);
 
 var bTwo   = (2 > 4  === true);
 
