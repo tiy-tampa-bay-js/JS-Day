@@ -87,5 +87,5 @@ console.log('Question 6: ' + sSix);
 
 var questions = (18);
 for (var index=0; index < questions; index++) {
-   console.log("I have answered" + questions );
+   console.log("I have answered " + questions + " questions." );
 }
