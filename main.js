@@ -8,15 +8,15 @@ console.log('---------------------------')
 
 var bOne   = (3 * 5  === 15);
 
-var bTwo   = (2 > 4  === true);
+var bTwo   = (2 < 4  === true);
 
-var bThree = (4 >= 9 === true);
+var bThree = (4 <= 9 === true);
 
-var bFour  = (1 > 3) && (2 >= 1);
+var bFour  = (1 < 3) && (2 >= 1);
 
-var bFive  = (4 >= 10) || (5 <= 3);
+var bFive  = (4 >= 10) || (5 >= 3);
 
-var bSix   = (10 % 3 === 0);
+var bSix   = (9 % 3 === 0);
 
 console.log('---------------------------')
 console.log('Question 1: ' + bOne);
@@ -34,17 +34,17 @@ console.log('---------------------------')
 var names = [ 'John', 'Sally', 'Mark', 'Mary'];
 var ages  = [     15,      24,     45,     19];
 
-var aOne   = (names[0] === 'Sally');
+var aOne   = (names[3] === 'Mary');
 
-var aTwo   = (names.length === 5);
+var aTwo   = (names.length >= 4);
 
-var aThree = (names.join() === 'John Sally Mark Mary');
+var aThree = (names.join(' ') === 'John Sally Mark Mary');
 
-var aFour  = (names.reverse()[0] === 'John'); // Don't forget to reference the documentation when you're confused by a method. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+var aFour  = (names.reverse()[3] === 'John'); // Don't forget to reference the documentation when you're confused by a method. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 
-var aFive  = (names[1].toUpperCase() === 'sally');
+var aFive  = (names[2].toLowerCase() === 'sally');
 
-var aSix   = (names.concat(ages) === ['John', 'Sally', 'Mark', 'Mary', '15', 24, '45', 19]);
+var aSix   = (names.concat(ages).toString() === ['Mary', 'Mark', 'Sally', 'John', '15', 24, '45', 19].toString());
 
 console.log('---------------------------')
 console.log('Question 1: ' + aOne);
@@ -61,17 +61,17 @@ console.log('---------------------------')
 var prose = "Where are we going?";
 var fact  = "I left my icecream on the counter."
 
-var sOne   = (prose[0] === 'Where');
+var sOne   = (prose.substring(0,5) === 'Where');
 
-var sTwo   = (prose.length === 20);
+var sTwo   = (prose.length <= 20);
 
-var sThree = (prose.split() === ["Where", "are", "we", "going?"]);
+var sThree = (prose.split(" ").toString() === ["Where", "are", "we", "going?"].toString());
 
-var sFour  = (prose + fact === "Where are we going? I left my icecream on the counter.");
+var sFour  = (prose + " " + fact === "Where are we going? I left my icecream on the counter.");
 
-var sFive  = (prose.concat(' yoooooo     ').trim() === "Where are we going?yoooooo");
+var sFive  = (prose.concat(' yoooooo     ').trim() === "Where are we going? yoooooo");
 
-var sSix   = (fact.toLowerCase() === "I LEFT MY ICECREAM ON THE COUNTER.");
+var sSix   = (fact.toUpperCase() === "I LEFT MY ICECREAM ON THE COUNTER.");
 
 console.log('---------------------------')
 console.log('Question 1: ' + sOne);
@@ -80,3 +80,6 @@ console.log('Question 3: ' + sThree);
 console.log('Question 4: ' + sFour);
 console.log('Question 5: ' + sFive);
 console.log('Question 6: ' + sSix);
+
+
+
