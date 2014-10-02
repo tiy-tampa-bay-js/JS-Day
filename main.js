@@ -44,7 +44,7 @@ var aFour  = (names.reverse()[3] === 'John'); // Don't forget to reference the d
 
 var aFive  = (names[2].toLowerCase() === 'sally');
 
-var aSix   = (names.concat(ages).toString() === ['Mary', 'Mark', 'Sally', 'John', '15', 24, '45', 19].toString());
+var aSix   = (names.reverse().concat(ages).toString() === ['John', 'Sally', 'Mark', 'Mary', '15', 24, '45', 19].toString());
 
 console.log('---------------------------')
 console.log('Question 1: ' + aOne);
@@ -80,6 +80,24 @@ console.log('Question 3: ' + sThree);
 console.log('Question 4: ' + sFour);
 console.log('Question 5: ' + sFive);
 console.log('Question 6: ' + sSix);
+
+
+var questions = 18;
+
+for (var i = 0; i < questions; i++) {
+	console.log('I got the right answer ' + questions + ' times!');
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
